@@ -18,6 +18,6 @@ public class MarketerServiceTest {
 	@Test
 	public void findAllMarketerTest()
 	{
-		System.out.println(service.getAllMarketers());
+		//System.out.println(service.getAllMarketers());
 	}
 }

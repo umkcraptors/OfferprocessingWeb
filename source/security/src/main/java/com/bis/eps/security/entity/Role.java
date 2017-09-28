@@ -20,7 +20,7 @@ public class Role implements Serializable
 	private Integer id;
 	@Column(name="role_name",nullable=false)
 	private String roleName;
-	
+	//private String roleName;
 	public Role() {
 	}
 	

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="OfferprocessingWeb">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/source/common/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/source/config/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/source/config/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/source/offerprocessing-web/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/source/offerprocessing-web/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/source/offerprocessing/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/source/offerprocessing/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/source/security/src/main/java"/>
+        <property name="context-root" value="OfferprocessingWeb"/>
+        <property name="java-output-path" value="/OfferprocessingWeb/source/common/target/classes"/>
+    </wb-module>
+</project-modules>

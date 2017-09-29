@@ -1,0 +1,5 @@
+com\bis\eps\offerprocessing\dao\MarketerDao.class
+com\bis\eps\offerprocessing\dao\MarketerDaoImpl.class
+com\bis\eps\offerprocessing\entity\Marketer.class
+com\bis\eps\offerprocessing\service\MarketerService.class
+com\bis\eps\offerprocessing\service\MarketerServiceImpl.class

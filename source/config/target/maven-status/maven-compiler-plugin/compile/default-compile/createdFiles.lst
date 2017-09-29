@@ -1,0 +1,4 @@
+com\bis\eps\config\db\DatabaseConnectionConfig.class
+com\bis\eps\config\db\OPCleanInitDatabase.class
+com\bis\eps\config\db\PropertyPathConfiguration.class
+com\bis\eps\config\db\OPDataBaseInstallation.class

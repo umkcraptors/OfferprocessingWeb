@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bis.eps.offerprocessing.entity.Marketer;
+import com.bis.eps.offerprocessing.exception.RetrieveFailedException;
 import com.bis.eps.offerprocessing.service.MarketerService;
 import com.bis.eps.offerprocessing.web.dto.StatusDTO;
+
 
 
 
@@ -31,33 +33,59 @@ public class MarketerController {
 	@GetMapping("/{marketerId}")
 	public Marketer getMarketers(@PathVariable("marketerId") long marketerId){
 		LOG.info("getMarketers for " + marketerId);
-		return marketerService.getMarketer(marketerId);
+		try {
+			return marketerService.getMarketer(marketerId);
+		} catch (RetrieveFailedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			LOG.error("Error in controller retrive method");
+		}
+		return null;
 	}
 	@RequestMapping(value="/all",method=RequestMethod.GET)
 	public List<Marketer> allMarketers(){
 		List<Marketer> list = marketerService.getAllMarketers();
 		return list;
 	}
+	
 	@RequestMapping(value="/update",method=RequestMethod.POST)
 	public Marketer editMarketer(@RequestBody Marketer marketer){
-		 marketer = marketerService.updateMarketer(marketer);
+		LOG.info("Update method in controller");
+		try {
+		marketer = marketerService.updateMarketer(marketer);
+		}
+		 catch(Exception e) {
+			   LOG.error(e+"Error");
+		 }
 		return marketer;
 		
 	}
 	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public Marketer addMarketer(@RequestBody Marketer marketer){
+		LOG.info("Add method in controller marketer");
+		try {
 	    marketer = marketerService.addMarketer(marketer);
-		return marketer;
+		}
+		catch(Exception e) {
+			   LOG.error(e+"Error");
+		 }
+	    return marketer;
 	}
 	
 	@RequestMapping(value="/delete/{marketerId}",method=RequestMethod.GET)
 	public StatusDTO delete(@PathVariable("marketerId") long marketerId){
-	   
+	   try {
 		marketerService.deleteMarketer(marketerId);
+		LOG.info("delete Marketers for " + marketerId);
+		}
+	   catch(Exception e) {
+		   LOG.error(e+"Error");
 		StatusDTO status = new StatusDTO();
 		status.setMessage("Marketer Deleted Successfully");
 		status.setStatus(200);
 		return status;
+	   }
+	return null;
 	}
 	
 }

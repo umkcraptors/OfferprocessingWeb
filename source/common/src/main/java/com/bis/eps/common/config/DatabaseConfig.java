@@ -44,7 +44,7 @@ public class DatabaseConfig {
 		factory.setPersistenceUnitName("spring-jpa-unit1");
 
 		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-		vendorAdapter.setGenerateDdl(Boolean.FALSE);
+		vendorAdapter.setGenerateDdl(Boolean.TRUE);
 		vendorAdapter.setShowSql(Boolean.TRUE);
 		factory.setJpaVendorAdapter(vendorAdapter);
 		factory.setPackagesToScan(env.getProperty("hibernate.scan_packages"));
@@ -69,10 +69,10 @@ public class DatabaseConfig {
 	@Bean
 	public DataSource dataSource() {
 		BasicDataSource dataSource = new BasicDataSource();
-		dataSource.setDriverClassName(env.getProperty("oracle.jdbc.driver.OracleDriver"));
-		dataSource.setUrl(env.getProperty("jdbc:oracle:thin:@localhost:1521:orcl"));
-		dataSource.setUsername(env.getProperty("system"));
-		dataSource.setPassword(env.getProperty("Srikanth7"));
+		dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
+		dataSource.setUrl(env.getProperty("jdbc.url"));
+		dataSource.setUsername(env.getProperty("jdbc.username"));
+		dataSource.setPassword(env.getProperty("jdbc.password"));
 		return dataSource;
 	}
 }

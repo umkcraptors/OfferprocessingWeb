@@ -1,5 +1,9 @@
 com\bis\eps\offerprocessing\dao\MarketerDao.class
+com\bis\eps\offerprocessing\exception\DeleteFailedException.class
+com\bis\eps\offerprocessing\exception\UpdateFailedException.class
 com\bis\eps\offerprocessing\dao\MarketerDaoImpl.class
+com\bis\eps\offerprocessing\exception\RetrieveFailedException.class
 com\bis\eps\offerprocessing\entity\Marketer.class
+com\bis\eps\offerprocessing\exception\InsertFailedException.class
 com\bis\eps\offerprocessing\service\MarketerService.class
 com\bis\eps\offerprocessing\service\MarketerServiceImpl.class

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bis.eps.offerprocessing.entity.Marketer;
+import com.bis.eps.offerprocessing.exception.InsertFailedException;
 import com.bis.eps.offerprocessing.exception.RetrieveFailedException;
 import com.bis.eps.offerprocessing.service.MarketerService;
 import com.bis.eps.offerprocessing.web.dto.StatusDTO;
@@ -62,13 +63,13 @@ public class MarketerController {
 	}
 	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public Marketer addMarketer(@RequestBody Marketer marketer){
-		LOG.info("Add method in controller marketer");
-		try {
-	    marketer = marketerService.addMarketer(marketer);
-		}
-		catch(Exception e) {
-			   LOG.error(e+"Error");
-		 }
+		LOG.info("Add method in controller marketer");		
+			try {
+				marketer = marketerService.addMarketer(marketer);
+			} catch (InsertFailedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}		
 	    return marketer;
 	}
 	

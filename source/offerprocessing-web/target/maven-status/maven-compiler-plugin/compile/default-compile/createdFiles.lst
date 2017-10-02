@@ -1,0 +1,4 @@
+com\bis\eps\offerprocessing\web\WebAppInitializer.class
+com\bis\eps\offerprocessing\web\dto\StatusDTO.class
+com\bis\eps\offerprocessing\web\rest\MarketerController.class
+com\bis\eps\offerprocessing\web\config\WebAppConfig.class

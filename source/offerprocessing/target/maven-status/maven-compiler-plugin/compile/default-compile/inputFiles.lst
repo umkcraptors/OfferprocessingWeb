@@ -1,6 +1,9 @@
 C:\Git folders\offerprocessingweb\source\offerprocessing\src\main\java\com\bis\eps\offerprocessing\entity\Marketer.java
 C:\Git folders\offerprocessingweb\source\offerprocessing\src\main\java\com\bis\eps\offerprocessing\service\MarketerService.java
 C:\Git folders\offerprocessingweb\source\offerprocessing\src\main\java\com\bis\eps\offerprocessing\exception\RetrieveFailedException.java
+C:\Git folders\offerprocessingweb\source\offerprocessing\src\main\java\com\bis\eps\offerprocessing\exception\InsertFailedException.java
 C:\Git folders\offerprocessingweb\source\offerprocessing\src\main\java\com\bis\eps\offerprocessing\dao\MarketerDao.java
 C:\Git folders\offerprocessingweb\source\offerprocessing\src\main\java\com\bis\eps\offerprocessing\dao\MarketerDaoImpl.java
+C:\Git folders\offerprocessingweb\source\offerprocessing\src\main\java\com\bis\eps\offerprocessing\exception\UpdateFailedException.java
 C:\Git folders\offerprocessingweb\source\offerprocessing\src\main\java\com\bis\eps\offerprocessing\service\MarketerServiceImpl.java
+C:\Git folders\offerprocessingweb\source\offerprocessing\src\main\java\com\bis\eps\offerprocessing\exception\DeleteFailedException.java

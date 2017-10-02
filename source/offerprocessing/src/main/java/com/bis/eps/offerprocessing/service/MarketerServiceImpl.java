@@ -26,15 +26,17 @@ public class MarketerServiceImpl implements MarketerService {
 	private MarketerDao marketerDAO;
 	
 	@Transactional
-	public Marketer addMarketer(Marketer marketer) throws InsertFailedException{
+	public Marketer addMarketer(Marketer marketer) throws InsertFailedException {
 		try
 		{
 		System.out.println("Marketer Service create invoked:");
 		marketer = marketerDAO.save(marketer);
+		throw new InsertFailedException("Insertion failed");
 		}
 		catch(Exception ex) {
-			
-       	 LOG.info("Adding marketer details exception..." ,ex);	
+			ex.printStackTrace();
+       	 LOG.error("Adding marketer details exception..." ,ex);	
+       	 
 		}
 		return marketer;
 	}
@@ -43,6 +45,7 @@ public class MarketerServiceImpl implements MarketerService {
 		try {
 		System.out.println("Marketer Service Update invoked:");
 		marketer = marketerDAO.save(marketer);
+		throw new UpdateFailedException("Updation failed");
 		}
 		catch(Exception e)
 		{
@@ -52,9 +55,10 @@ public class MarketerServiceImpl implements MarketerService {
 		return marketer;
 	}
 
-	public Marketer getMarketer(long marketerId) throws RetrieveFailedException {
+	public Marketer getMarketer(long marketerId)  {
 	try {
 		return marketerDAO.find(marketerId);
+	
 	}
 	catch(Exception e)
 	{
@@ -73,6 +77,7 @@ public class MarketerServiceImpl implements MarketerService {
 	public void deleteMarketer(long marketerId) throws DeleteFailedException {
 		try{
 			 marketerDAO.delete(marketerId);
+			throw new DeleteFailedException("Delete Exception");
 		}
          catch (Exception ex) {
 			

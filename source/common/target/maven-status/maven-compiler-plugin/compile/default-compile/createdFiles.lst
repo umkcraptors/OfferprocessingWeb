@@ -1,0 +1,7 @@
+com\bis\eps\common\dao\JpaDao.class
+com\bis\eps\common\dao\HibernateDao.class
+com\bis\eps\common\entity\IEntity.class
+com\bis\eps\common\config\DatabaseConfig.class
+com\bis\eps\common\config\PropertiesConfig.class
+com\bis\eps\common\config\NotifierConfig.class
+com\bis\eps\common\dao\IDao.class

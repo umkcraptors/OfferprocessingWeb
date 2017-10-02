@@ -1,5 +1,6 @@
 package com.bis.eps.offerprocessing.entity;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 import javax.persistence.Column;
@@ -15,7 +16,7 @@ import com.bis.eps.common.entity.IEntity;
 
 @Entity
 @Table(name = "marketers")
-public class Marketer implements IEntity {
+public class Marketer implements IEntity,Serializable {
 
 
 	/**

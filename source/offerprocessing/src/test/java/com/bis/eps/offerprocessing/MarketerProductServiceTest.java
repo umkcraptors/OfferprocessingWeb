@@ -6,18 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.bis.eps.offerprocessing.service.MarketerService;
+import com.bis.eps.offerprocessing.service.MarketerProductService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {AppConfig.class})
-public class MarketerServiceTest {
+public class MarketerProductServiceTest {
 
 	@Autowired
-	MarketerService marketerService;
+	MarketerProductService marketerproductService;
 	
 	@Test
-	public void findAllMarketerTest()
+	public void findAllMarketerProductsTest()
 	{
-		System.out.println(marketerService.getAllMarketers());
+		System.out.println(marketerproductService.getAllMarketerProducts());
 	}
 }

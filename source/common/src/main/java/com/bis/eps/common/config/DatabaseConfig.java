@@ -44,7 +44,7 @@ public class DatabaseConfig {
 		factory.setPersistenceUnitName("spring-jpa-unit1");
 
 		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-		vendorAdapter.setGenerateDdl(Boolean.FALSE);
+		vendorAdapter.setGenerateDdl(Boolean.TRUE);
 		vendorAdapter.setShowSql(Boolean.TRUE);
 		factory.setJpaVendorAdapter(vendorAdapter);
 		factory.setPackagesToScan(env.getProperty("hibernate.scan_packages"));

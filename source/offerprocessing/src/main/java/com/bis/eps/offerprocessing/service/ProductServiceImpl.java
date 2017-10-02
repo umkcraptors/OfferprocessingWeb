@@ -11,14 +11,14 @@ import com.bis.eps.offerprocessing.dao.ProductDAO;
 
 import com.bis.eps.offerprocessing.entity.Product;
 
-@Service("productService")
+@Service("ProductService")
 @Transactional
 public class ProductServiceImpl implements ProductService {
 	
 	
 
 		@Autowired(required=true)
-		@Qualifier("productDao")
+		@Qualifier("ProductDAO")
 		private ProductDAO productDAO;
 		
 		@Transactional

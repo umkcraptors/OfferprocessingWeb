@@ -13,7 +13,7 @@ import javax.persistence.Transient;
 import com.bis.eps.common.entity.IEntity;
 
 @Entity
-@Table(name = "products")
+@Table(name = "product")
 public class Product implements IEntity {
 	
 
